@@ -7,3 +7,6 @@ CD into BruinbotWebDashboard. Create a virtual environment by running `python3 -
 
 `export FLASK_APP=webdashboard.py`
 `flask run`
+
+Get a firebase key add store it in root directory as `key.json`. 
+
