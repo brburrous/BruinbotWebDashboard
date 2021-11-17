@@ -10,3 +10,5 @@ CD into BruinbotWebDashboard. Create a virtual environment by running `python3 -
 
 Get a firebase key add store it in root directory as `key.json`. 
 
+Install tailwind using: `npm install tailwind`
+
