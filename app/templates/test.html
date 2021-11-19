@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block content %}
+<script>
+    var intervalID = setInterval(myCallback, 500);
+    let i = 1
+
+    function myCallback(a, b) {
+        // Your code here
+        // Parameters are purely optional.
+        $.get('/stream', function (data) {
+            $("#dateCount").html(data.time)
+            console.log(data.time)
+        })
+    }
+</script>
+
+<h1 id="dateCount">Hello</h1>
+
+{% endblock %}
