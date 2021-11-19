@@ -6,3 +6,4 @@ from app import app
 def index():
     # return "<h1>Hello World</h1>"
     return render_template('main.html')
+
