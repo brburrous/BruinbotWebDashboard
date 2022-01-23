@@ -8,7 +8,7 @@ CD into BruinbotWebDashboard. Create a virtual environment by running `python3 -
 `export FLASK_APP=webdashboard.py`
 `flask run`
 
-Get a firebase key add store it in root directory as `key.json`. 
+Get a firebase key and store it in root directory as `key.json`. 
 
 CD into static folder and run `npm init` to create node_modules folder
 Install tailwind using: `npm install tailwind`
