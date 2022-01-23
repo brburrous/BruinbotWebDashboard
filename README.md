@@ -14,7 +14,7 @@ CD into static folder and run `npm init` to create node_modules folder
 Install tailwind using: `npm install tailwind`
 Compile tailwind using: `npx tailwindcss-cli@latest build ./src/style.css -o css/main.css`
 
-We're using daisyUI tailwind components. To install dasiyUI, run npm i daisyui. After installing daisy, you must compile tailwind. 
+We're using daisyUI tailwind components. To install dasiyUI, run `npm i daisyui`. After installing daisy, you must compile tailwind. 
 
 ## Video stream
 The video stream is handled by Vision-AI. In that git repo, there's a file stream.py. Instructions to run it are found in that repo's readme. Once running, the program streams webcam data to a local port. This local port is then hosted online using ngrok. Accessing this stream is very easy. Just modify the src of the img element used to view the stream so that it's pointing towards the ngrok url. 
