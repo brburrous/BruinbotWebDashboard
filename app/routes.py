@@ -30,3 +30,7 @@ def stream():
 @app.route('/test')
 def test():
     return render_template("test.html")
+
+@app.route('/logs')
+def logs():
+    print("Hello world")
