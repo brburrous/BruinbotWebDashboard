@@ -1,0 +1,4 @@
+
+[35m🌼 daisyUI components 2.13.5[0m [0m https://github.com/saadeghi/daisyui
+  [32m✔︎ Including:[0m [0m base, components, themes[29], utilities
+  

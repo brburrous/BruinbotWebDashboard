@@ -1,6 +1,6 @@
 from flask import render_template, request, jsonify
 from app import app
-from firebase_setup import testRef
+# from firebase_setup import testRef
 
 from datetime import datetime
 
@@ -13,13 +13,13 @@ def index():
     return render_template('main.html')
 
 @app.route('/add', methods=['POST'])
-def create():
-    try:
-        id = request.json['id']
-        testRef.document(id).set(request.json)
-        return jsonify({"success": True}), 200
-    except Exception as e:
-        return f"An Error Occured: {e}"
+# def create():
+#     try:
+#         id = request.json['id']
+#         testRef.document(id).set(request.json)
+#         return jsonify({"success": True}), 200
+#     except Exception as e:
+#         return f"An Error Occured: {e}"
 
 @app.route('/stream', methods=['GET'])
 def stream():
