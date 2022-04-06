@@ -2,9 +2,6 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 export FLASK_APP=webdashboard.py
-cd app/static
 
-npm init -y
-npm install tailwind
-npm i daisyui
-npx tailwindcss-cli@latest build ./src/style.css -o css/main.css
+npm install
+npx tailwindcss -i ./src/style.css -o ./app/static/css/main.css
