@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { fooBar } from './script';
+// import { getFirestore, getDocs } from 'firebase/firestore/lite';
+import { addMessage, Terminal } from './script';
+import { collection, query, where, onSnapshot, getFirestore, getDocs } from "firebase/firestore";
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
@@ -17,8 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-fooBar()
-// console.log(db)
 
 // Get a list of cities from your database
 async function getCities(db) {
@@ -28,10 +27,27 @@ async function getCities(db) {
     return cityList;
 }
 
-async function printCities(db) {
+async function printCities(db, Terminal) {
     const cityList = await getCities(db)
-    console.log(cityList[0].message)
+    let message = cityList[0].message
+    console.log(message)
+    addMessage(Terminal, message)
 }
 
-printCities(db)
+printCities(db, Terminal)
 
+const q = query(collection(db, "logs"), where("useful", "==", true));
+const unsubscribe = onSnapshot(q, (snapshot) => {
+    snapshot.docChanges().forEach((change) => {
+        if (change.type === "added") {
+            console.log("New city: ", change.doc.data().message);
+            addMessage(Terminal, change.doc.data().message)
+        }
+        if (change.type === "modified") {
+            console.log("Modified city: ", change.doc.data());
+        }
+        if (change.type === "removed") {
+            console.log("Removed city: ", change.doc.data());
+        }
+    });
+});
