@@ -20,9 +20,9 @@ Get a firebase key and store it in root directory as `key.json`.
 
 CD into static folder and run `npm init` to create node_modules folder
 Install tailwind using: `npm install tailwind`
-Compile tailwind using: `npx tailwindcss -i ./src/style.css -o ./app/static/css/main.css`
+Compile tailwind using: `npx tailwindcss -i ./src/style/style.css -o ./app/static/css/main.css`
 Install daisyui using: `npm install daisyui`
-Recompile tailwind: `npx tailwindcss -i ./src/style.css -o ./app/static/css/main.css` 
+Recompile tailwind: `npx tailwindcss -i ./src//style/style.css -o ./app/static/css/main.css` 
 
 We're using daisyUI tailwind components. To install dasiyUI, run `npm i daisyui`. After installing daisy, you must compile tailwind. 
 

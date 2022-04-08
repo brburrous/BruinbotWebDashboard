@@ -4,4 +4,4 @@ pip3 install -r requirements.txt
 export FLASK_APP=webdashboard.py
 
 npm install
-npx tailwindcss -i ./src/style.css -o ./app/static/css/main.css
+npx tailwindcss -i ./src/style/style.css -o ./app/static/css/main.css
