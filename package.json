@@ -9,6 +9,7 @@
     "firebase": "^9.6.10"
   },
   "scripts": {
-    "build": "webpack --mode=development"
+    "build": "webpack --mode=development",
+    "build-css": "npx tailwindcss -i ./src/style/style.css -o ./app/static/css/main.css"
   }
 }

@@ -8,15 +8,17 @@
 
 
 
-<div class="container mx-auto px-5vw py-5">
-    <div class="grid grid-cols-3 gap-4  items-stretch content-between">
+<div class="container mx-auto px-5 py-5">
+    <div class="sm:grid sm:grid-cols-3 gap-4  items-stretch content-between flex-row">
         <div class="col-span-1 row-span-2">
             {{ card() }}
         </div>
-        <div class="col-span-2 row-span-2 flex justify-between flex-col">
-            <div class="">
+        <div class="sm:col-span-2 sm:row-span-2 bg-yellow-400 sm:bg-green-500">
+            <div class="relative">
                 {{ terminal() }}
-                <button class="btn clearbtn">Clear</button>
+                <div class="box-content absolute right-2 top-2">
+                    <button class="btn" id="clearBtn">Clear</button>
+                </div>
             </div>
             <div class="">
                 {{ dashboard() }}

@@ -1,3 +1,5 @@
+import { doc } from "firebase/firestore"
+
 let Terminal = document.getElementById("Terminal")
 
 
@@ -26,4 +28,14 @@ let fooBar = () => {
     console.log("Hello, world")
 }
 
+let clearTerminal = () => {
+    while (Terminal.firstChild) {
+        Terminal.removeChild(Terminal.firstChild)
+    }
+}
+
+let clearBtn = document.getElementById("clearBtn")
+clearBtn.addEventListener("click", clearTerminal)
+
 export { addMessage, Terminal }
+

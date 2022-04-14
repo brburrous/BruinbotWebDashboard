@@ -16,12 +16,11 @@
         body {
             margin: 0;
             height: 100%;
-            overflow: hidden
         }
     </style>
 </head>
 
-<body>
+<body class="sm:overflow-hidden overflow-scroll">
     {% block content %} {% endblock %}
     <script type=text/javascript src="{{
         url_for('static', filename='jquery.js') }}"></script>

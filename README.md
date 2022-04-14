@@ -67,3 +67,7 @@ The filename after `-i` refers to the input file that tells tailwind what you wa
 the css that tailwind is going to generate. 
 
 
+## Webpack
+
+We're using webpack to compile the javscript. Every time a change is made to the JS, you must run: `npm run build`. 
+
