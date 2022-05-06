@@ -51,3 +51,60 @@ const unsubscribe = onSnapshot(q, (snapshot) => {
         }
     });
 });
+
+
+document.addEventListener('keydown', moveDir)
+document.addEventListener('keyup', stopDir)
+
+function moveDir(e) {
+    if (e.code in dirList) {
+        sendMove(dirList[e.code], "TRUE")
+        console.log(dirList[e.code])
+    }
+}
+function stopDir(e) {
+    if (e.code in dirList) {
+        sendMove(dirList[e.code], "FALSE")
+        console.log(dirList[e.code])
+    }
+}
+
+// function moveDir(e) {
+//     if (e.code == "ArrowUp") {
+//         console.log("UP!!!")
+//     } else if (e.code == "ArrowDown") {
+//         console.log("Down")
+//     } else if (e.code == "ArrowLeft") {
+//         console.log("Left")
+//     } else if (e.code == "ArrowRight") {
+//         console.log("Right")
+//     }
+// }
+// function stopDir(e) {
+//     if (e.code == "ArrowUp") {
+//         console.log("Stop UP!!!")
+//     } else if (e.code == "ArrowDown") {
+//         console.log("stop Down")
+//     } else if (e.code == "ArrowLeft") {
+//         console.log("stop Left")
+//     } else if (e.code == "ArrowRight") {
+//         console.log("stop Right")
+//     }
+// }
+
+function sendMove(direction, move) {
+    let postBody = {
+        Direction: direction,
+        move: move
+    }
+    $.post("http://192.168.0.100:5000/move", postBody, function (data) {
+        console.log(data)
+    })
+}
+
+const dirList = {
+    ArrowUp: "Up",
+    ArrowDown: "Down",
+    ArrowLeft: "Left",
+    ArrowRight: "Right"
+}
