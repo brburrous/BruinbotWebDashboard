@@ -94,17 +94,29 @@ function stopDir(e) {
 
 function sendMove(direction, move) {
     let postBody = {
-        Direction: direction,
-        move: move
+        "direction": direction,
+        "move": move
     }
-    $.post("http://192.168.0.100:5000/move", postBody, function (data) {
-        console.log(data)
+    console.log(postBody)
+    // $.post("http://127.0.0.1:4000/move", { direction: "right", move: "TRUE" }, function (data) {
+    //     console.log(data)
+    // })
+    $.ajax({
+        url: "http://127.0.0.1:4000/move",
+        type: "POST",
+        data: JSON.stringify(postBody),
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        async: false,
+        success: function (msg) {
+            console.log(msg);
+        }
     })
 }
 
 const dirList = {
-    ArrowUp: "Up",
-    ArrowDown: "Down",
-    ArrowLeft: "Left",
-    ArrowRight: "Right"
+    ArrowUp: "up",
+    ArrowDown: "down",
+    ArrowLeft: "left",
+    ArrowRight: "right"
 }
