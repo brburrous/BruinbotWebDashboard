@@ -46,7 +46,7 @@ function sendEmotion(emotion) {
         "duration": "50"
     }
     $.ajax({
-        url: "https://192.168.0.100:5000/face",
+        url: "http://192.168.0.100:5000/face",
         type: "POST",
         data: JSON.stringify(postBody),
         dataType: 'json',
