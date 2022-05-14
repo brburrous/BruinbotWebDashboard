@@ -1,4 +1,6 @@
 # BruinbotWebDashboard
+URL: https://tinyurl.com/Bruinbot
+
 
 ## This is a flask web app used to control ASME's Bruin Bot. 
 
