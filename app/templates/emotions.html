@@ -1,0 +1,10 @@
+{% from "button-grid.html" import bGrid %}
+{% extends "home.html" %}
+
+{% block component %}
+
+{{ bGrid() }}
+
+<script type=text/javascript src="{{ url_for('static', filename='dist/emotions.js') }}" defer></script>
+
+{% endblock %}

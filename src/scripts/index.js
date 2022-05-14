@@ -69,28 +69,6 @@ function stopDir(e) {
     }
 }
 
-// function moveDir(e) {
-//     if (e.code == "ArrowUp") {
-//         console.log("UP!!!")
-//     } else if (e.code == "ArrowDown") {
-//         console.log("Down")
-//     } else if (e.code == "ArrowLeft") {
-//         console.log("Left")
-//     } else if (e.code == "ArrowRight") {
-//         console.log("Right")
-//     }
-// }
-// function stopDir(e) {
-//     if (e.code == "ArrowUp") {
-//         console.log("Stop UP!!!")
-//     } else if (e.code == "ArrowDown") {
-//         console.log("stop Down")
-//     } else if (e.code == "ArrowLeft") {
-//         console.log("stop Left")
-//     } else if (e.code == "ArrowRight") {
-//         console.log("stop Right")
-//     }
-// }
 
 function sendMove(direction, move) {
     let postBody = {

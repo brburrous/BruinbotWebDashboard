@@ -20,12 +20,11 @@
     </style>
 </head>
 
-<body class="sm:overflow-hidden overflow-scroll">
+<body class="sm:overflow-hidden overflow-scroll bg-base-200">
     {% block content %} {% endblock %}
     <script type=text/javascript src="{{
         url_for('static', filename='jquery.js') }}"></script>
-    <script type=text/javascript> $SCRIPT_ROOT={{ request.script_root|tojson|safe }}; </script> <script
-        type=text/javascript src="{{ url_for('static', filename='dist/bundle.js') }}" defer></script>
+
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+{% from "dashboard.html" import dashboard %}
+{% from "terminal.html" import terminal %}
+{% from "card.html" import card %}
+{% from "navbar.html" import navbar %}
+
+{% extends "index.html" %}
+
+{% block content %}
+
+
+<div class="container mx-auto px-5 py-5">
+    {{ navbar() }}
+    {% block component %} {% endblock %}
+</div>
+
+{% endblock %}

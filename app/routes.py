@@ -10,7 +10,7 @@ from datetime import datetime
 @app.route('/index')
 def index():
     # return "<h1>Hello World</h1>"
-    return render_template('main.html')
+    return render_template('logs.html')
 
 @app.route('/add', methods=['POST'])
 # def create():
@@ -27,10 +27,14 @@ def stream():
     current_time = now.strftime("%H:%M:%S")
     return jsonify({"time":current_time})
 
-@app.route('/test')
+@app.route('/nav')
 def test():
-    return render_template("test.html")
+    return render_template("navigation.html")
 
 @app.route('/logs')
 def logs():
     print("Hello world")
+
+@app.route('/emotions')
+def emotions():
+    return render_template("emotions.html")

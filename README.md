@@ -61,7 +61,7 @@ Next, tell tailwind we're using daisyui by adding the following line to tailwind
 ## Compiling Tailwind:
 
 Tailwind only compiles the css your html files (specified in the tailwind config) actually call for. 
-In order to compile these files, use the following command: `npx tailwindcss -i ./src/style.css -o ./app/static/css/main.css`
+In order to compile these files, use the following command: `npx tailwindcss -i ./src/style/style.css -o ./app/static/css/main.css`
 
 The filename after `-i` refers to the input file that tells tailwind what you want. The filename after `-o` refers to the location of
 the css that tailwind is going to generate. 
