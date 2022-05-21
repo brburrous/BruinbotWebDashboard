@@ -2,9 +2,12 @@
 {% extends "home.html" %}
 
 {% block component %}
+  
+        <div class=" flex flex-row justify-center">
+            {{ bGrid() }}
+        </div>
 
-{{ bGrid() }}
-
-<script type=text/javascript src="{{ url_for('static', filename='dist/emotions.js') }}" defer></script>
-
-{% endblock %}
+    
+    <script type=text/javascript src="{{ url_for('static', filename='dist/emotions.js') }}" defer></script>
+    
+    {% endblock %}
