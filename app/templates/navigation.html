@@ -1,4 +1,16 @@
 {% extends "home.html" %}
 {% block component %}
-
-{% endblock %}
+<div class="flex justify-center">
+    <div class="bg-base-100 py-14 w-[80vw] rounded-2xl shadow-md">
+        <div class="flex flex-row justify-center my-2">
+            <div class="btn btn-ghost bg-blue-400 w-40 h-40 rounded-3xl shadow-2xl flex justify-center items-center text-white text-8xl">↑</div>
+        
+        </div>
+        <div class="flex flex-row justify-center gap-x-2">
+            <div class="btn btn-ghost bg-blue-400 w-40 h-40 rounded-3xl  shadow-2xl flex justify-center items-center text-white text-8xl select-none">←</div>
+            <div class="btn btn-ghost bg-blue-400 w-40 h-40 rounded-3xl shadow-2xl flex justify-center items-center text-white text-8xl">↓</div>
+            <div class="btn btn-ghost bg-blue-400 w-40 h-40 rounded-3xl shadow-2xl flex justify-center items-center text-white text-8xl">→</div>
+        </div>
+    </div>
+</div>
+{% endblock %}  
