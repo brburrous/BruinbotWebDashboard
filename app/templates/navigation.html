@@ -2,15 +2,41 @@
 {% block component %}
 <div class="flex justify-center">
     <div class="bg-base-100 py-14 w-[80vw] rounded-2xl shadow-md">
-        <div class="flex flex-row justify-center my-2">
-            <div class="btn btn-ghost bg-blue-400 w-[11vw] h-[11vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="-rotate-90 w-3/4"></div>
+       <div class="flex flex-col justify center">
+
+           <div class="flex flex-row justify-center gap-2">
+                   <div>
+                       <div class="flex flex-row justify-center my-2">
+                           <div id="up" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="-rotate-90 w-3/4"></div>
+                       </div>
+                       <div class="flex flex-row justify-center gap-x-2">
+                           <div id="left" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl  shadow-2xl flex justify-center items-center"> <img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-180 w-3/4"> </div>
+                           <div id="down" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-90 w-3/4"></div>
+                           <div id="right" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="w-3/4"></div>
+                       </div>
+                   </div>
+                   <div>
+                       <div class="flex flex-row justify-center my-2">
+                           <div id="nod-up" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="-rotate-90 w-3/4"></div>
+                       </div>
+                       <div class="flex flex-row justify-center gap-x-2">
+                           <div id="nod-left" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl  shadow-2xl flex justify-center items-center"> <img src={{url_for('static', filename="images/rotate-left.svg")}} class="w-3/4"> </div>
+                           <div id="nod-down" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-90 w-3/4"></div>
+                           <div id="nod-right" class="btn btn-ghost bg-blue-400 w-[9vw] h-[9vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/rotate-right.svg")}} class="w-3/4"></div>
+                       </div> 
+                   </div>
+               
+           </div>
+           <div class="flex flex-row justify-center gap-10 mt-6">
+                   <div id="snack-1" class="btn btn-ghost bg-blue-400 w-[9vw] h-[6vw] rounded-3xl  shadow-2xl flex justify-center items-center"> Dispense</div>
+                   <div id="snack-1" class="btn btn-ghost bg-blue-400 w-[9vw] h-[6vw] rounded-3xl  shadow-2xl flex justify-center items-center"> Dispense</div>
+                   <div id="snack-1" class="btn btn-ghost bg-blue-400 w-[9vw] h-[6vw] rounded-3xl  shadow-2xl flex justify-center items-center"> Dispense</div>
+                   <div id="snack-1" class="btn btn-ghost bg-blue-400 w-[9vw] h-[6vw] rounded-3xl  shadow-2xl flex justify-center items-center"> Dispense</div>
+           </div>
+       </div>
         
-        </div>
-        <div class="flex flex-row justify-center gap-x-2">
-            <div class="btn btn-ghost bg-blue-400 w-[11vw] h-[11vw] rounded-3xl  shadow-2xl flex justify-center items-center"> <img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-180 w-3/4"> </div>
-            <div class="btn btn-ghost bg-blue-400 w-[11vw] h-[11vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-90 w-3/4"></div>
-            <div class="btn btn-ghost bg-blue-400 w-[11vw] h-[11vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="w-3/4"></div>
-        </div>
     </div>
 </div>
+
+<script type=text/javascript src="{{ url_for('static', filename='dist/drivetrain.js') }}" defer></script>
 {% endblock %}  
