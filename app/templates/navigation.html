@@ -8,15 +8,15 @@
            <div class="flex flex-col md:flex-row gap-2 justify-between md:w-[60vw] mx-auto">
                <div class="border-4 rounded-xl p-4 justify-center flex flex-col">
                    <div class="flex flex-row justify-center my-2">
-                       <div id="up" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="-rotate-90 w-3/4"></div>
+                       <div id="up" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="-rotate-90 select-none w-full md:w-3/4"></div>
                     </div>
                     <div class="flex flex-row justify-center gap-x-2">
-                        <div id="left" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl  shadow-2xl flex justify-center items-center"> <img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-180 w-3/4"> </div>
-                        <div id="down" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-90 w-3/4"></div>
-                        <div id="right" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="w-3/4"></div>
+                        <div id="left" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl  shadow-2xl flex justify-center items-center"> <img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-180 w-full md:w-3/4"> </div>
+                        <div id="down" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-90 w-full md:w-3/4"></div>
+                        <div id="right" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="w-full md:w-3/4"></div>
                     </div>
                     <div class="mt-6">
-                        <h1 class="block text-center text-xl font-bold underline">Drive Controls</h1>
+                        <h1 class="block text-center text-xl font-bold underline select-none">Drive Controls</h1>
                     </div>
                 </div>
                 <div class="flex flex-col justify-center gap-1 border-4 p-4 rounded-lg">
@@ -29,20 +29,20 @@
                         <div id="snack-1" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] mx-auto rounded-md md:rounded-xl  shadow-2xl flex justify-center items-center text-white"> 4</div>
                     </div>
                     <div class="mt-6">
-                        <h1 class="block text-center text-xl font-bold"> <span style="text-decoration:  underline">Snacks</span>  🍿</h1>
+                        <h1 class="block text-center text-xl font-bold select-none"> <span style="text-decoration:  underline">Snacks</span>  🍿</h1>
                     </div> 
                 </div>
                    <div class="border-4 rounded-xl p-4 flex flex-col justify-center ">
                        <div class="flex flex-row justify-center my-2">
-                           <div id="nod-up" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="-rotate-90 w-3/4"></div>
+                           <div id="nod-up" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="-rotate-90 w-full md:w-3/4"></div>
                        </div>
                        <div class="flex flex-row justify-center gap-x-2">
-                           <div id="nod-left" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl  shadow-2xl flex justify-center items-center"> <img src={{url_for('static', filename="images/rotate-left.svg")}} class="w-3/4"> </div>
-                           <div id="nod-down" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-90 w-3/4"></div>
-                           <div id="nod-right" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/rotate-right.svg")}} class="w-3/4"></div>
+                           <div id="nod-left" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl  shadow-2xl flex justify-center items-center"> <img src={{url_for('static', filename="images/rotate-left.svg")}} class="w-full md:w-3/4"> </div>
+                           <div id="nod-down" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/arrow.svg")}} class="rotate-90 w-full md:w-3/4"></div>
+                           <div id="nod-right" class="btn btn-ghost bg-blue-400 w-[10vw] md:w-[5vw] h-[5vw] rounded-3xl shadow-2xl flex justify-center items-center"><img src={{url_for('static', filename="images/rotate-right.svg")}} class="w-full md:w-3/4"></div>
                        </div> 
                        <div class="mt-6">
-                            <h1 class="block text-center text-xl font-bold underline">Head Controls</h1>
+                            <h1 class="block text-center text-xl font-bold underline select-none">Head Controls</h1>
                         </div>
                    </div>
                

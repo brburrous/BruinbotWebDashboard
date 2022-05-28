@@ -4592,6 +4592,10 @@ body[dir="rtl"] .checkbox:checked,
     width: 5vw;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
   .md\:flex-1 {
     flex: 1 1 0%;
   }
