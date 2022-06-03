@@ -91,7 +91,7 @@ function moveHead(direction, enable) {
     }
 }
 
-function dispenseSnack(slot) {
+function dispenseSnack(bin) {
     console.log(bin)
     let postBody = {
         "bin": bin
