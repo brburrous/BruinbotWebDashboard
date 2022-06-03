@@ -14,34 +14,34 @@ snack3 = document.getElementById("snack-3")
 snack4 = document.getElementById("snack-4")
 
 
-right.addEventListener("mousedown", () => { moveDirection("right", true) })
-right.addEventListener("mouseup", () => { moveDirection("right", false) })
+right.addEventListener("mousedown", () => { moveDirection("right", "TRUE") })
+right.addEventListener("mouseup", () => { moveDirection("right", "FALSE") })
 
-left.addEventListener("mousedown", () => { moveDirection("left", true) })
-left.addEventListener("mouseup", () => { moveDirection("left", false) })
+left.addEventListener("mousedown", () => { moveDirection("left", "TRUE") })
+left.addEventListener("mouseup", () => { moveDirection("left", "FALSE") })
 
-up.addEventListener("mousedown", () => { moveDirection("up", true) })
-up.addEventListener("mouseup", () => { moveDirection("up", false) })
+up.addEventListener("mousedown", () => { moveDirection("forward", "TRUE") })
+up.addEventListener("mouseup", () => { moveDirection("forward", "FALSE") })
 
-down.addEventListener("mousedown", () => { moveDirection("down", true) })
-down.addEventListener("mouseup", () => { moveDirection("down", false) })
+down.addEventListener("mousedown", () => { moveDirection("backward", "TRUE") })
+down.addEventListener("mouseup", () => { moveDirection("backward", "FALSE") })
 
-head_right.addEventListener("mousedown", () => { moveHead("right", true) })
-head_right.addEventListener("mouseup", () => { moveHead("right", false) })
+head_right.addEventListener("mousedown", () => { moveHead("right", "TRUE") })
+head_right.addEventListener("mouseup", () => { moveHead("right", "FALSE") })
 
-head_left.addEventListener("mousedown", () => { moveHead("left", true) })
-head_left.addEventListener("mouseup", () => { moveHead("left", false) })
+head_left.addEventListener("mousedown", () => { moveHead("left", "TRUE") })
+head_left.addEventListener("mouseup", () => { moveHead("left", "FALSE") })
 
-head_up.addEventListener("mousedown", () => { moveHead("up", true) })
-head_up.addEventListener("mouseup", () => { moveHead("up", false) })
+head_up.addEventListener("mousedown", () => { moveHead("up", "TRUE") })
+head_up.addEventListener("mouseup", () => { moveHead("up", "FALSE") })
 
-head_down.addEventListener("mousedown", () => { moveHead("down", true) })
-head_down.addEventListener("mouseup", () => { moveHead("down", false) })
+head_down.addEventListener("mousedown", () => { moveHead("down", "TRUE") })
+head_down.addEventListener("mouseup", () => { moveHead("down", "FALSE") })
 
-snack1.addEventListener("click", () => { dispenseSnack(1) })
-snack2.addEventListener("click", () => { dispenseSnack(2) })
-snack3.addEventListener("click", () => { dispenseSnack(3) })
-snack4.addEventListener("click", () => { dispenseSnack(4) })
+snack1.addEventListener("click", () => { dispenseSnack("one") })
+snack2.addEventListener("click", () => { dispenseSnack("two") })
+snack3.addEventListener("click", () => { dispenseSnack("three") })
+snack4.addEventListener("click", () => { dispenseSnack("four") })
 
 
 
@@ -49,11 +49,11 @@ function moveDirection(direction, enable) {
     console.log(direction)
     let postBody = {
         "direction": direction,
-        "on": enable
+        "move": enable
     }
     try {
         $.ajax({
-            url: "https://192.168.0.100:5000/direction",
+            url: "https://192.168.0.100:5000/move",
             type: "POST",
             data: JSON.stringify(postBody),
             dataType: 'json',
@@ -76,7 +76,7 @@ function moveHead(direction, enable) {
     }
     try {
         $.ajax({
-            url: "https://192.168.0.100:5000/direction",
+            url: "https://192.168.0.100:5000/head",
             type: "POST",
             data: JSON.stringify(postBody),
             dataType: 'json',
@@ -92,13 +92,13 @@ function moveHead(direction, enable) {
 }
 
 function dispenseSnack(slot) {
-    console.log(slot)
+    console.log(bin)
     let postBody = {
-        "slot": slot
+        "bin": bin
     }
     try {
         $.ajax({
-            url: "https://192.168.0.100:5000/snack",
+            url: "https://192.168.0.100:5000/dispense",
             type: "POST",
             data: JSON.stringify(postBody),
             dataType: 'json',
