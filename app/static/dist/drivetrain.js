@@ -53,7 +53,7 @@ function moveDirection(direction, enable) {
     }
     try {
         $.ajax({
-            url: "https://192.168.0.100:5000/move",
+            url: "https://192.168.0.101:5000/move",
             type: "POST",
             data: JSON.stringify(postBody),
             dataType: 'json',
@@ -76,7 +76,7 @@ function moveHead(direction, enable) {
     }
     try {
         $.ajax({
-            url: "https://192.168.0.100:5000/head",
+            url: "https://192.168.0.101:5000/head",
             type: "POST",
             data: JSON.stringify(postBody),
             dataType: 'json',
@@ -98,7 +98,7 @@ function dispenseSnack(bin) {
     }
     try {
         $.ajax({
-            url: "https://192.168.0.100:5000/dispense",
+            url: "https://192.168.0.101:5000/dispense",
             type: "POST",
             data: JSON.stringify(postBody),
             dataType: 'json',
